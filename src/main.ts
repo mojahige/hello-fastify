@@ -1,13 +1,12 @@
 import 'make-promises-safe';
 import fastify from 'fastify';
+import { routes } from './routes';
 
-const server = fastify({
+export const server = fastify({
   logger: true,
 });
 
-server.get('/', async () => {
-  return { hello: 'world' };
-});
+server.register(routes);
 
 const start = async () => {
   try {
@@ -16,6 +15,6 @@ const start = async () => {
     server.log.error(error);
     process.exit(1);
   }
-}
+};
 
 start();
