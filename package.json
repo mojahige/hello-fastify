@@ -1,0 +1,10 @@
+{
+  "name": "hello-fastify",
+  "author": "mojahige",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "fastify": "^3.19.2",
+    "make-promises-safe": "^5.1.0"
+  }
+}
