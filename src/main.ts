@@ -1,11 +1,15 @@
 import 'make-promises-safe';
 import fastify from 'fastify';
 import { routes } from './routes';
+import prismaPlugin from './plugins/prisma';
 
 export const server = fastify({
-  logger: true,
+  logger: {
+    prettyPrint: true,
+  },
 });
 
+server.register(prismaPlugin);
 server.register(routes);
 
 const start = async () => {
