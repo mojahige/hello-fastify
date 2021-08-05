@@ -1,7 +1,6 @@
 {
   "name": "hello-fastify",
   "author": "mojahige",
-  "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "dev": "ts-node-dev src/main.ts",
